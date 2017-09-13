@@ -14,7 +14,7 @@ abstract class SectionAdapter : BaseAdapter(), OnItemClickListener {
 
     abstract fun numberOfRows(section: Int): Int
 
-    abstract fun getRowView(section: Int, row: Int, convertView: View, parent: ViewGroup): View
+    abstract fun getRowView(section: Int, row: Int, convertView: View?, parent: ViewGroup): View
 
     abstract fun getRowItem(section: Int, row: Int): Any
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.aether.aislebethere.ShoppingSectionAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         // Item selectors
         val newItemEditText: EditText = findViewById(R.id.newItemEditText)
+        val headerList: HeaderListView = findViewById(R.id.headerListView)
+        headerList.setAdapter(ShoppingSectionAdapter(this.applicationContext))
+
         newItemEditText.setOnKeyListener(object: View.OnKeyListener{
             override fun onKey(v: View?, code: Int, ev: KeyEvent?) : Boolean {
                 if (ev?.action == KeyEvent.ACTION_UP && (ev.keyCode == KeyEvent.KEYCODE_ENTER || code == EditorInfo.IME_ACTION_DONE)) {
@@ -25,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        val headerList: HeaderListView = findViewById(R.id.headerListView)
     }
 
 }
