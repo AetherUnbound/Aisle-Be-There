@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Aisle Be There</string>
+    <string name="newItemTextViewString">+</string>
+    <string name="newItemEditViewHintString">Shopping item...</string>
 </resources>
