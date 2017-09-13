@@ -11,15 +11,21 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
         <ListView
+            android:id="@+id/shoppingListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minHeight="50dp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
 
@@ -44,10 +50,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:ems="10"
+                    android:hint="@string/newItemEditViewHintString"
                     android:inputType="text"
-                    android:text="@string/newItemEditViewHintString"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium.Inverse"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@android:color/darker_gray"
+                    tools:targetApi="lollipop" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
 
