@@ -14,12 +14,11 @@
         tools:layout_editor_absoluteY="8dp"
         tools:ignore="MissingConstraints">
 
-        <ListView
-            android:id="@+id/shoppingListView"
+        <com.applidium.headerlistview.HeaderListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="visible" />
+            android:layout_height="match_parent"
+            android:id="@+id/headerListView"
+            android:layout_weight="1" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

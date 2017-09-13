@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
+
+        val headerList: HeaderListView = findViewById(R.id.headerListView)
     }
 
 }
